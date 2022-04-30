@@ -12,6 +12,7 @@ interface IScrollContext {
   scrollY: number;
   scrollHeight: number;
   maxScrollY: number;
+  hasScrolled: boolean;
   scrollYTo: (y: number) => void;
 }
 
@@ -19,6 +20,7 @@ const initialState: IScrollContext = {
   scrollY: 0,
   scrollHeight: 0,
   maxScrollY: 0,
+  hasScrolled: false,
   scrollYTo: () => {},
 };
 
@@ -32,6 +34,7 @@ export const ScrollContextProvider: React.FC<IScrollProviderProps> = ({ elementR
   const [scrollHeight, setScrollHeight] = useState<number>(0);
   const [scrollY, setScrollY] = useState<number>(0);
   const [maxScrollY, setMaxScrollY] = useState<number>(0);
+  const [hasScrolled, setHasScrolled] = useState<boolean>(false);
 
   useEffect(() => {
     if (!elementRef?.current) return;
@@ -42,6 +45,9 @@ export const ScrollContextProvider: React.FC<IScrollProviderProps> = ({ elementR
     if (!elementRef?.current) return;
     const el = elementRef.current;
     const handleScroll = () => {
+      if (!hasScrolled) {
+        setHasScrolled(true);
+      }
       setScrollY(elementRef?.current?.scrollTop || 0);
     };
 
@@ -66,8 +72,9 @@ export const ScrollContextProvider: React.FC<IScrollProviderProps> = ({ elementR
       scrollHeight,
       scrollYTo,
       maxScrollY,
+      hasScrolled,
     }),
-    [scrollY, scrollHeight, scrollYTo, maxScrollY],
+    [scrollY, scrollHeight, scrollYTo, maxScrollY, hasScrolled],
   );
 
   return <ScrollContext.Provider value={value}>{children}</ScrollContext.Provider>;

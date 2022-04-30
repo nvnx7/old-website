@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Anchor, BoxTypes, Nav, Text } from 'grommet';
 import { More } from 'grommet-icons';
-import { useSpring } from '@react-spring/web';
+import { config, useSpring } from '@react-spring/web';
 import { useHover } from '@use-gesture/react';
-import { AnimatedBox, AnimatedText } from 'components/animated/ index';
+import { AnimatedBox, AnimatedText, AnimatedYLine } from 'components/animated/ index';
 import { VerticalText, YLine } from 'components/misc';
 import Column from './Column';
 import socialLinks from 'constants/social';
@@ -17,6 +17,7 @@ interface HoverLabelProps {
 const HoverLabel: React.FC<HoverLabelProps> = ({ label, isHovering, multiplier = 100 }) => {
   const [{ w }, api] = useSpring(() => ({
     w: 0,
+    config: config.stiff,
   }));
 
   useEffect(() => {
@@ -53,6 +54,7 @@ const HoverLabel: React.FC<HoverLabelProps> = ({ label, isHovering, multiplier =
 
 const ContactAside: React.FC<BoxTypes> = ({ ...props }) => {
   const [hoverIdx, setHoverIdx] = useState<number>(-1);
+  const { h } = useSpring({ from: { h: 0 }, h: 100, config: config.stiff });
 
   const bind = useHover(({ hovering, args }) => {
     hovering ? setHoverIdx(args?.[0]) : setHoverIdx(-1);
@@ -61,7 +63,7 @@ const ContactAside: React.FC<BoxTypes> = ({ ...props }) => {
   return (
     <Column height="full" justify="around" {...props}>
       <Column gap="large">
-        <YLine height="100px" />
+        <AnimatedYLine style={{ height: h.to(v => `${v}px`) }} />
         <VerticalText weight={900} margin={{ vertical: 'small' }}>
           connect
         </VerticalText>

@@ -1,6 +1,6 @@
 import { default as NextLink } from 'next/link';
 import { Anchor, AnchorProps, Box } from 'grommet';
-import { useSpring } from '@react-spring/web';
+import { useSpring, config } from '@react-spring/web';
 import { useHover } from '@use-gesture/react';
 import { AnimatedAnchor, AnimatedBox } from 'components/animated/ index';
 import { useState } from 'react';
@@ -9,6 +9,7 @@ const Link: React.FC<AnchorProps> = ({ href, children, ...props }) => {
   const [isHovering, setHovering] = useState<boolean>(false);
   const [{ w }, api] = useSpring(() => ({
     w: 0,
+    config: config.stiff,
   }));
 
   const hoverBind = useHover(({ hovering }) => {
@@ -24,6 +25,7 @@ const Link: React.FC<AnchorProps> = ({ href, children, ...props }) => {
         {...hoverBind()}
         {...props}
       >
+        {children}
         <AnimatedBox
           as="span"
           background="brand"
@@ -36,7 +38,6 @@ const Link: React.FC<AnchorProps> = ({ href, children, ...props }) => {
             width: w.to(x => `${x}%`),
           }}
         />
-        {children}
       </AnimatedAnchor>
     </NextLink>
   );
