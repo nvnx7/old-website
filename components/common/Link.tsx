@@ -1,11 +1,11 @@
 import { default as NextLink } from 'next/link';
-import { AnchorProps, Text, TextProps } from 'grommet';
+import { AnchorExtendedProps, AnchorProps, Text, TextProps } from 'grommet';
 import { useSpring, config } from '@react-spring/web';
 import { useHover } from '@use-gesture/react';
 import { AnimatedAnchor, AnimatedBox } from 'components/animated/ index';
 import { useState } from 'react';
 
-interface LinkProps extends AnchorProps {
+interface LinkProps extends AnchorExtendedProps {
   text?: TextProps;
 }
 
@@ -27,7 +27,7 @@ const Link: React.FC<LinkProps> = ({ href, children, text = {}, ...props }) => {
         style={{ position: 'relative', overflow: 'visible' }}
         color={isHovering ? 'white' : 'brand'}
         {...hoverBind()}
-        {...props}
+        {...(props as AnchorProps)}
       >
         <AnimatedBox
           as="span"
