@@ -1,8 +1,10 @@
-import { Box, BoxTypes, List, Paragraph } from 'grommet';
+import { Box, BoxTypes, List, Paragraph, Text } from 'grommet';
 import { SlideUpHeading } from 'components/animation';
 import projects, { ProjectItem } from 'constants/projects';
 import { Link } from 'components/common';
 import { XLine } from 'components/misc';
+import { Row } from 'components/layout';
+import socialLinks from 'constants/social';
 
 const WorkItem: React.FC<{ item: ProjectItem }> = ({ item }) => {
   return (
@@ -39,6 +41,13 @@ const Works: React.FC<BoxTypes> = ({ ...props }) => {
       >
         {(item: ProjectItem, index: number) => <WorkItem key={index} item={item} />}
       </List>
+
+      <Row alignSelf="end" gap="small">
+        <Text>see</Text>
+        <Link href={socialLinks.github} target="_blank">
+          github
+        </Link>
+      </Row>
     </Box>
   );
 };
