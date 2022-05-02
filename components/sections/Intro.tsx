@@ -26,7 +26,7 @@ const Intro: React.FC<BoxTypes> = ({ ...props }) => {
       </Box>
 
       <Row alignSelf="end" margin={{ vertical: 'large' }} gap="large">
-        <Link href="/about">know more</Link>
+        <Link href="/about">show more</Link>
       </Row>
     </Column>
   );
