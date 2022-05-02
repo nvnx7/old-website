@@ -1,6 +1,7 @@
 import { SlideUpHeading } from 'components/animation';
 import { Link } from 'components/common';
 import { Column } from 'components/layout';
+import socialLinks from 'constants/social';
 import { Box, BoxTypes } from 'grommet';
 
 const Connect: React.FC<BoxTypes> = ({ ...props }) => {
@@ -8,9 +9,11 @@ const Connect: React.FC<BoxTypes> = ({ ...props }) => {
     <Column {...props}>
       <SlideUpHeading>connect</SlideUpHeading>
       <Box direction="row" width="full" justify="around" pad={{ vertical: 'large' }}>
-        <Link href="#">mail</Link>
-        <Link href="#">follow</Link>
-        <Link href="#">dm</Link>
+        <Link href={socialLinks.email}>mail</Link>
+        <Link href={socialLinks.twitter} target="_blank">
+          follow
+        </Link>
+        <Link href={socialLinks.whatsapp}>dm</Link>
       </Box>
     </Column>
   );
