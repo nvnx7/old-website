@@ -69,7 +69,7 @@ const ContactAside: React.FC<BoxTypes> = ({ ...props }) => {
         </VerticalText>
       </Column>
 
-      <Nav direction="column" justify="between" align="start" gap="small" flex={{ grow: 0.2 }}>
+      <Nav direction="column" justify="between" align="start" gap="medium" flex={{ grow: 0.2 }}>
         <Anchor
           href={socialLinks.twitter}
           target="_blank"
@@ -80,7 +80,7 @@ const ContactAside: React.FC<BoxTypes> = ({ ...props }) => {
           <Text size="medium" weight={900}>
             tw
           </Text>
-          <HoverLabel isHovering={hoverIdx === 0} label="twitter" multiplier={80} />
+          <HoverLabel isHovering={hoverIdx === 0} label="twitter" multiplier={100} />
         </Anchor>
 
         <Anchor
@@ -93,7 +93,7 @@ const ContactAside: React.FC<BoxTypes> = ({ ...props }) => {
           <Text size="medium" weight={900}>
             gh
           </Text>
-          <HoverLabel isHovering={hoverIdx === 1} label="github" multiplier={70} />
+          <HoverLabel isHovering={hoverIdx === 1} label="github" multiplier={90} />
         </Anchor>
 
         <Anchor
@@ -106,7 +106,7 @@ const ContactAside: React.FC<BoxTypes> = ({ ...props }) => {
           <Text size="medium" weight={900}>
             wh
           </Text>
-          <HoverLabel isHovering={hoverIdx === 2} label="whatsapp" multiplier={90} />
+          <HoverLabel isHovering={hoverIdx === 2} label="whatsapp" multiplier={145} />
         </Anchor>
 
         <Anchor
@@ -118,7 +118,7 @@ const ContactAside: React.FC<BoxTypes> = ({ ...props }) => {
           <Text size="medium" weight={900}>
             @
           </Text>
-          <HoverLabel isHovering={hoverIdx === 3} label="email" multiplier={60} />
+          <HoverLabel isHovering={hoverIdx === 3} label="email" multiplier={80} />
         </Anchor>
 
         <Anchor href={socialLinks.linkTree} target="_blank">

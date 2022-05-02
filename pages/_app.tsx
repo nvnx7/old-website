@@ -1,5 +1,8 @@
 import '@fontsource/source-code-pro/400.css';
 import '@fontsource/source-code-pro/900.css';
+import '@fontsource/roboto-mono/400.css';
+import '@fontsource/share-tech-mono';
+import 'theme/styles.css';
 
 import { createRef, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
@@ -51,6 +54,7 @@ function App({ Component, pageProps }: AppProps) {
       full
       theme={theme}
       themeMode="dark"
+      // background={{ image: '/bg.png' }}
       // style={{ overflowY: 'hidden' }}
       // onScroll={handleScroll}
     >

@@ -1,11 +1,27 @@
 import { ThemeType } from 'grommet';
 
-const cssReset = `margin:0;padding:0;box-sizing:border-box;::-webkit-scrollbar{width:0;}`;
+export const brandColor: string = '#E03E20';
+
+const cssReset = {
+  margin: 0,
+  padding: 0,
+  boxSizing: 'border-box',
+  backgroundImage: `url('/images/bg.png')`,
+  '::-webkit-scrollbar': { width: 0 },
+  '*::selection': {
+    background: `${brandColor}`,
+    color: 'white',
+  },
+  '*::-moz-selection': {
+    background: `${brandColor}`,
+    color: 'white',
+  },
+};
 
 const customTheme: ThemeType = {
   global: {
     colors: {
-      brand: '#EA5455',
+      brand: brandColor,
       background: {
         dark: '#0f0f0f',
         white: '#ffffff',
@@ -13,7 +29,7 @@ const customTheme: ThemeType = {
       'accent-1': '#ffffff',
     },
     font: {
-      family: `'Source Code Pro', monospace`,
+      family: `'Monument Extended', monospace`,
       size: '16px',
     },
   },
@@ -30,6 +46,13 @@ const customTheme: ThemeType = {
   paragraph: {
     extend: {
       maxWidth: 'initial',
+      fontFamily: `'Share Tech Mono', monospace`,
+    },
+  },
+  heading: {
+    extend: {
+      textTransform: 'uppercase',
+      fontFamily: `'Monument Extended', monospace`,
     },
   },
 };
