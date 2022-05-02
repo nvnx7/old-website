@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import { HeroAvatar } from 'components/animation';
 import { Layout } from 'components/layout';
 import { Box } from 'grommet';
-import { Connect, Story } from 'components/sections';
+import { Connect, Story, Works } from 'components/sections';
 
 const About: NextPage = () => {
   return (
@@ -14,7 +14,9 @@ const About: NextPage = () => {
         </Box>
       </Box>
 
-      <Connect pad={{ vertical: 'xlarge' }} />
+      <Works pad={{ vertical: 'xlarge', horizontal: 'large' }} />
+
+      <Connect pad={{ vertical: 'large' }} />
     </Layout>
   );
 };
