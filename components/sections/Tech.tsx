@@ -5,11 +5,11 @@ import { BoxTypes, Paragraph } from 'grommet';
 
 const Tech: React.FC<BoxTypes> = ({ ...props }) => {
   return (
-    <Column align="start" {...props}>
+    <Column {...props}>
       <SlideUpHeading alignSelf="end">
         the <Mark>tech</Mark>
       </SlideUpHeading>
-      <Paragraph>A subset of the tools of craft...</Paragraph>
+      <Paragraph textAlign="center">A subset of the tools of craft.</Paragraph>
     </Column>
   );
 };

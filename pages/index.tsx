@@ -7,8 +7,8 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Hero />
-      <Intro pad={{ horizontal: 'xlarge' }} margin={{ vertical: 'large' }} />
-      <Tech pad={{ horizontal: 'xlarge' }} />
+      <Intro pad={{ horizontal: 'large' }} margin={{ vertical: 'large' }} />
+      <Tech pad={{ horizontal: 'large' }} />
       <Connect margin={{ vertical: 'large' }} />
 
       <ScrollCue pad={{ vertical: '12px' }} />

@@ -3,7 +3,7 @@ import { SlideUpHeading } from 'components/animation';
 import projects, { ProjectItem } from 'constants/projects';
 import { Link } from 'components/common';
 import { XLine } from 'components/misc';
-import { Row } from 'components/layout';
+import { Column, Row } from 'components/layout';
 import socialLinks from 'constants/social';
 
 const WorkItem: React.FC<{ item: ProjectItem }> = ({ item }) => {
@@ -48,6 +48,16 @@ const Works: React.FC<BoxTypes> = ({ ...props }) => {
           github
         </Link>
       </Row>
+
+      <Column justify="start" gap="xsmall">
+        <Paragraph>also,</Paragraph>
+        <Row gap="small" justify="start">
+          <Text>the</Text>
+          <Link href={socialLinks.dev} target="_blank">
+            blog
+          </Link>
+        </Row>
+      </Column>
     </Box>
   );
 };
