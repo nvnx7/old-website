@@ -23,10 +23,13 @@ const customTheme: ThemeType = {
     colors: {
       brand: brandColor,
       background: {
-        dark: '#0f0f0f',
-        white: '#ffffff',
+        dark: 'dark-1',
+        white: 'light-1',
       },
       'accent-1': '#ffffff',
+      'dark-1': '#0f0f0f',
+      'dark-2': '#262626',
+      'dark-3': '#333333',
     },
     font: {
       family: `'Monument Extended', monospace`,
