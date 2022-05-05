@@ -104,7 +104,7 @@ const ContactAside: React.FC<BoxTypes> = ({ ...props }) => {
           style={{ position: 'relative', overflow: 'visible' }}
         >
           <Text size="medium" weight={900}>
-            wh
+            wa
           </Text>
           <HoverLabel isHovering={hoverIdx === 2} label="whatsapp" multiplier={145} />
         </Anchor>
