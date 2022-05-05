@@ -1,8 +1,9 @@
 import { BoxTypes, Text } from 'grommet';
 import { animated, useSpring } from '@react-spring/web';
 import { Column } from 'components/layout';
-
+import useBreakpointValue from 'hooks/useBreakpointValue';
 import { brandColor } from 'theme';
+
 const HeroLogo: React.FC<BoxTypes> = ({ ...props }) => {
   const { t } = useSpring({
     from: { t: 60 },
@@ -10,25 +11,28 @@ const HeroLogo: React.FC<BoxTypes> = ({ ...props }) => {
     config: { mass: 4, tension: 400, friction: 250 },
   });
 
-  const w = 500;
-  const h = Math.round(w * (423 / 633));
+  const logoW = useBreakpointValue({ small: 300, medium: 500 });
+  const logoH = Math.round(logoW * (423 / 633));
+
+  const txtSz = useBreakpointValue({ small: '3xl', medium: '5xl' });
+  console.log(logoW);
 
   return (
     <Column
-      width={`${w}px`}
-      height={`${h}px`}
+      width={`${logoW}px`}
+      height={`${logoH}px`}
       justify="center"
       style={{ position: 'relative' }}
       {...props}
     >
-      <Text weight={900} size="5xl" style={{ zIndex: 1, textShadow: '2px 2px 60px black' }}>
+      <Text weight={900} size={txtSz} style={{ zIndex: 1, textShadow: '2px 2px 60px black' }}>
         NAVEEN
       </Text>
 
       <animated.svg
         xmlns="http://www.w3.org/2000/svg"
-        width={w}
-        height={h}
+        width={logoW}
+        height={logoH}
         viewBox="0 0 633 423"
         fill="none"
         overflow="visible"
