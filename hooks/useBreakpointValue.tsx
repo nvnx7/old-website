@@ -1,7 +1,7 @@
 import useBreakpoint from './useBreakpoint';
 
 type Size = 'small' | 'medium' | 'large';
-type IBreakpointValues<T extends string | number> = {
+type IBreakpointValues<T> = {
   small: T;
   medium?: T;
   large?: T;
@@ -9,7 +9,7 @@ type IBreakpointValues<T extends string | number> = {
 
 const sizes: Size[] = ['small', 'medium', 'large'];
 
-const useBreakpointValue = <T extends string | number>(values: IBreakpointValues<T>): T => {
+const useBreakpointValue = <T,>(values: IBreakpointValues<T>): T => {
   const currentSize = useBreakpoint() as Size;
 
   let k = sizes.indexOf(currentSize);
