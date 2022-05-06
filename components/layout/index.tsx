@@ -4,3 +4,4 @@ export { default as Footer } from './Footer';
 export { default as ContactAside } from './ContactAside';
 export { default as Row } from './Row';
 export { default as Column } from './Column';
+export { default as Hidden } from './Hidden';
