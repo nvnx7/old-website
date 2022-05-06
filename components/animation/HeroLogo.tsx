@@ -15,7 +15,6 @@ const HeroLogo: React.FC<BoxTypes> = ({ ...props }) => {
   const logoH = Math.round(logoW * (423 / 633));
 
   const txtSz = useBreakpointValue({ small: '3xl', medium: '5xl' });
-  console.log(logoW);
 
   return (
     <Column
