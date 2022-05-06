@@ -34,7 +34,7 @@ const Layout: React.FC<BoxTypes> = ({ children, ...props }) => {
       <Hidden below="medium">
         <ScrollAside style={{ position: 'fixed', top: 0, right: 0 }} width="10%" />
       </Hidden>
-      <Footer pad={{ horizontal: 'medium', vertical: 'medium' }} />
+      <Footer pad={{ horizontal: 'medium', vertical: 'small' }} />
     </Box>
   );
 };

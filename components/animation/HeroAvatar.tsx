@@ -2,7 +2,7 @@ import { useSpring, animated } from '@react-spring/web';
 import { Box, BoxTypes } from 'grommet';
 import { brandColor } from 'theme';
 
-const Slash = () => {
+const Slash: React.FC<{ size?: number }> = ({ size = 450 }) => {
   const { x, y } = useSpring({
     from: { x: -80, y: 80 },
     x: 20,
@@ -10,11 +10,14 @@ const Slash = () => {
     config: { mass: 4, tension: 400, friction: 250 },
   });
 
+  const h = size;
+  const w = Math.round((h * 11) / 9);
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="550"
-      height="450"
+      width={w}
+      height={h}
       viewBox="0 0 568 75"
       fill="none"
       style={{ overflowX: 'visible' }}
@@ -29,11 +32,11 @@ const Slash = () => {
   );
 };
 
-const HeroAvatar: React.FC<BoxTypes> = ({ ...props }) => {
+const HeroAvatar: React.FC<{ size?: number } & BoxTypes> = ({ size = 450, ...props }) => {
   return (
     <Box
-      width="450px"
-      height="450px"
+      width={`${size}px`}
+      height={`${size}px`}
       style={{ position: 'relative' }}
       justify="center"
       align="center"
@@ -49,9 +52,10 @@ const HeroAvatar: React.FC<BoxTypes> = ({ ...props }) => {
           position: 'absolute',
           right: 0,
           top: 0,
+          zIndex: 0,
         }}
       />
-      <Slash />
+      <Slash size={size} />
     </Box>
   );
 };
