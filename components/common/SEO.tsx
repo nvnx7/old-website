@@ -11,7 +11,9 @@ const SEO: React.FC<DefaultSeoProps> = ({ ...props }) => {
       openGraph={{
         title: site.title,
         description: site.description,
-        images: [],
+        images: [
+          { url: `${site.url}/images/og.jpg`, width: 800, height: 600, alt: 'name above logo' },
+        ],
       }}
       twitter={{
         site: socialHandles.twitter,
