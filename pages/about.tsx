@@ -23,7 +23,7 @@ const About: NextPage = () => {
         <Story pad={{ top: 'medium' }} style={{ position: 'relative', zIndex: 1 }} />
 
         <Hidden below="medium">
-          <HeroAvatar style={{ position: 'absolute', right: 0, top: 10 }} />
+          <HeroAvatar style={{ position: 'absolute', right: 0, top: 64 }} />
         </Hidden>
       </Box>
 
