@@ -9,24 +9,28 @@ const Intro: React.FC<BoxTypes> = ({ ...props }) => {
     <Column align="start" {...props}>
       <Row gap="small" justify="start" pad={{ top: 'xlarge', bottom: 'medium' }}>
         <Box>
-          <SlideUpHeading>dev making</SlideUpHeading>
+          <SlideUpHeading>building things</SlideUpHeading>
           <SlideUpHeading>
-            some <Mark>dope</Mark> stuff
+            that are <Mark>dope</Mark>
           </SlideUpHeading>
         </Box>
         <XLine alignSelf="end" />
       </Row>
 
-      <Box width={{ max: 'medium' }} alignSelf="end">
-        <Paragraph textAlign="end">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel aliquam urna sed eu, quis
-          vitae. Convallis purus tincidunt accumsan ut lorem molestie. Sagittis mauris nibh semper
-          tincidunt a eu quis mauris, malesuada. Tincidunt pulvinar eu tristique nullam habitasse.
+      <Box width={{ max: 'large', width: '50%' }}>
+        <Paragraph>
+          A web3 engineer from India with experience in building things breathing on code - from
+          web/mobile apps to servers and everything in between. Built stuff with sigma-tools
+          including React, NextJs, React-Native, Kotlin, Node, Python, Solidity, Rust etc.
+        </Paragraph>
+        <Paragraph>
+          Currently focused on blockchain tech - smart-contracts, zk-proofs and decentralized web3
+          protocols.
         </Paragraph>
       </Box>
 
-      <Row alignSelf="end" margin={{ vertical: 'large' }} gap="large">
-        <Link href="/about">show more</Link>
+      <Row margin={{ vertical: 'large' }} gap="large">
+        <Link href="/about">more...</Link>
       </Row>
     </Column>
   );

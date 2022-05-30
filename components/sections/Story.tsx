@@ -10,18 +10,28 @@ const Story: React.FC<BoxTypes> = ({ ...props }) => {
       <Box direction={dir}>
         <Box width={{ width: '50%', min: 'medium' }}>
           <Paragraph>
-            Ut amet donec placerat et dolor posuere at. Scelerisque pellentesque tristique cursus
-            eget fermentum eget. Tempus mi placerat enim placerat purus ornare enim proin et.
-            Pretium lectus tristique tempor neque consequat feugiat. Mi quisque in euismod tortor,
-            sollicitudin commodo, elementum egestas congue. Ultricies enim, enim, pharetra aenean
-            amet massa, tellus risus.
+            A potato pc at home, 50mb-ish mobile data pack and a spark of curiosity on a boring day
+            - was what, you would probably say, red-pilled him as a kid to start tinkering in a now
+            extinct IDE and write the famous <i>Hello World</i> program in C++. Naveen has always
+            been a curious, rabbit-hole explorer, and not-so talkative, kind of being. Being good at
+            mathematics (arguably), computers fascinated him. So, at 14, after school hours, he
+            would teach himself programming using whatever at his disposal. He is allergic to
+            monotonous tasks.
           </Paragraph>
           <Paragraph>
-            Sollicitudin et pellentesque ipsum mi natoque vulputate suspendisse. Eget sodales libero
-            bibendum aenean id. Enim vivamus vitae vitae accumsan justo. Sed sed enim magna ac
-            mauris rhoncus varius nullam odio. Nisl, mattis non laoreet et. Arcu, lacus neque massa
-            adipiscing venenatis. Lacus nec quam mollis ultricies sit at. Elit morbi aenean aliquam
-            sodales venenatis vulputate a. Pretium interdum vitae dolor nec viverra quam amet.
+            Naveen is a computer engineer coming from a small-time town in India. He skipped formal
+            college education to learn a lot (pun intended). He taught himself everything from
+            discrete mathematics, algorithms, cryptography, ML to writing quality software -
+            websites, apps, backend etc. He is naturally drawn towards the tech at the edge.
+            Currently, he is focused on blockchains - Ethereum mostly, smart - contracts,
+            zero-knowledge proofs and web3.0 in general. Also, contributing to open-source that
+            interests him.
+          </Paragraph>
+          <Paragraph>
+            His interest is not only limited to code. You can also find him to reading books of
+            varying subjects - economics, psychology, biographies and a wee-bit fiction. Apart, from
+            being fluent in Hindi and English, he&apos;s also learnt Spanish with working
+            proficiency.
           </Paragraph>
         </Box>
       </Box>
