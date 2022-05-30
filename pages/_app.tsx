@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { grommet, Grommet } from 'grommet';
 import { deepMerge } from 'grommet/utils';
 import customTheme from 'theme';
-import { PageLoading } from 'components/common';
+import { PageLoading, SEO } from 'components/common';
 import { ScrollContextProvider } from 'context/scroll';
 
 import '@fontsource/share-tech-mono';
@@ -45,6 +45,7 @@ function App({ Component, pageProps }: AppProps) {
       <ScrollContextProvider elementRef={ref}>
         <>
           {isLoading && <PageLoading />}
+          <SEO />
           <Component {...pageProps} />
         </>
       </ScrollContextProvider>

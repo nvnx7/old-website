@@ -15,6 +15,7 @@
     "grommet": "^2.20.1",
     "grommet-icons": "^4.7.0",
     "next": "12.1.0",
+    "next-seo": "^5.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-intersection-observer": "^9.0.0",

@@ -3,11 +3,12 @@ import { HeroAvatar, SlideUpHeading } from 'components/animation';
 import { Hidden, Layout } from 'components/layout';
 import { Box } from 'grommet';
 import { Connect, Story, Works } from 'components/sections';
-import { Mark } from 'components/common';
+import { Mark, SEO } from 'components/common';
 
 const About: NextPage = () => {
   return (
     <Layout style={{ overflow: 'visible' }}>
+      <SEO title="About" />
       <Box
         pad={{ horizontal: 'large', top: 'large' }}
         justify="around"

@@ -1997,6 +1997,7 @@ __metadata:
     grommet: ^2.20.1
     grommet-icons: ^4.7.0
     next: 12.1.0
+    next-seo: ^5.4.0
     react: 17.0.2
     react-dom: 17.0.2
     react-intersection-observer: ^9.0.0
@@ -2019,6 +2020,17 @@ __metadata:
   version: 1.4.0
   resolution: "natural-compare@npm:1.4.0"
   checksum: 23ad088b08f898fc9b53011d7bb78ec48e79de7627e01ab5518e806033861bef68d5b0cd0e2205c2f36690ac9571ff6bcb05eb777ced2eeda8d4ac5b44592c3d
+  languageName: node
+  linkType: hard
+
+"next-seo@npm:^5.4.0":
+  version: 5.4.0
+  resolution: "next-seo@npm:5.4.0"
+  peerDependencies:
+    next: ^8.1.1-canary.54 || >=9.0.0
+    react: ">=16.0.0"
+    react-dom: ">=16.0.0"
+  checksum: fe19b4f7237111d6e8c2f3e9128946480f1b6e2d7ffab5902e8a4a1114721142daa187175334fa7d6da25605658e63cd8c6e3a68a9d9678fd7fbd4fb4b061391
   languageName: node
   linkType: hard
 
