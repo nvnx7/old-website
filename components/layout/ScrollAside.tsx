@@ -1,9 +1,12 @@
+import { useRouter } from 'next/router';
+import { BoxTypes, Text } from 'grommet';
 import { VerticalText } from 'components/misc';
-import { Box, BoxTypes, Text } from 'grommet';
 import Column from './Column';
 import ScrollBar from './ScrollBar';
 
 const ScrollAside: React.FC<BoxTypes> = ({ ...props }) => {
+  const { pathname } = useRouter();
+
   return (
     <Column height="full" as="aside" justify="center" gap="large" {...props}>
       <Text
@@ -17,14 +20,13 @@ const ScrollAside: React.FC<BoxTypes> = ({ ...props }) => {
       <ScrollBar />
       <VerticalText
         weight={900}
-        size="3xl"
-        // alignSelf="end"
+        size="2xl"
         style={{ position: 'absolute', left: 0, right: 0, bottom: 100 }}
-        // margin={{ top: 'auto' }}
         textAlign="center"
-        color="dark-1"
+        color="dark-2"
       >
-        /root
+        {pathname === '/' && 'root'}
+        {pathname === '/about' && 'whoami'}
       </VerticalText>
     </Column>
   );

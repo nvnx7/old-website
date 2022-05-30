@@ -1,14 +1,14 @@
-import '@fontsource/source-code-pro/400.css';
-import '@fontsource/source-code-pro/900.css';
-
 import { createRef, useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 import { grommet, Grommet } from 'grommet';
 import { deepMerge } from 'grommet/utils';
 import customTheme from 'theme';
-import PageLoading from 'components/common/PageLoading';
+import { PageLoading, SEO } from 'components/common';
 import { ScrollContextProvider } from 'context/scroll';
+
+import '@fontsource/share-tech-mono';
+import 'theme/styles.css';
 
 const theme = deepMerge(grommet, customTheme);
 
@@ -38,25 +38,14 @@ function App({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
-  // const handleScroll = e => {
-  //   e.preventDefault();
-  //   console.log('scroll');
-  // };
-
   const ref = createRef<HTMLDivElement>();
 
   return (
-    <Grommet
-      ref={ref}
-      full
-      theme={theme}
-      themeMode="dark"
-      // style={{ overflowY: 'hidden' }}
-      // onScroll={handleScroll}
-    >
+    <Grommet ref={ref} full theme={theme} themeMode="dark">
       <ScrollContextProvider elementRef={ref}>
         <>
           {isLoading && <PageLoading />}
+          <SEO />
           <Component {...pageProps} />
         </>
       </ScrollContextProvider>

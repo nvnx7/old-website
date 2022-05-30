@@ -1,15 +1,19 @@
 import { default as NextLink } from 'next/link';
-import { Anchor, AnchorProps, Box } from 'grommet';
+import { AnchorExtendedProps, AnchorProps, Text, TextProps } from 'grommet';
 import { useSpring, config } from '@react-spring/web';
 import { useHover } from '@use-gesture/react';
 import { AnimatedAnchor, AnimatedBox } from 'components/animated/ index';
 import { useState } from 'react';
 
-const Link: React.FC<AnchorProps> = ({ href, children, ...props }) => {
+interface LinkProps extends AnchorExtendedProps {
+  text?: TextProps;
+}
+
+const Link: React.FC<LinkProps> = ({ href, children, text = {}, ...props }) => {
   const [isHovering, setHovering] = useState<boolean>(false);
   const [{ w }, api] = useSpring(() => ({
     w: 0,
-    config: config.stiff,
+    config: config.default,
   }));
 
   const hoverBind = useHover(({ hovering }) => {
@@ -20,34 +24,28 @@ const Link: React.FC<AnchorProps> = ({ href, children, ...props }) => {
   return (
     <NextLink href={href ? href : ''} passHref>
       <AnimatedAnchor
-        style={{ position: 'relative' }}
+        style={{ position: 'relative', overflow: 'visible' }}
         color={isHovering ? 'white' : 'brand'}
         {...hoverBind()}
-        {...props}
+        {...(props as AnchorProps)}
       >
-        {children}
         <AnimatedBox
           as="span"
           background="brand"
           style={{
             position: 'absolute',
-            zIndex: -1,
             left: 0,
             top: 1,
             bottom: 1,
-            width: w.to(x => `${x}%`),
+            width: w.to(v => `${v}%`),
           }}
         />
+        <Text style={{ position: 'relative' }} {...text}>
+          {children}
+        </Text>
       </AnimatedAnchor>
     </NextLink>
   );
 };
-// const Link: React.FC<AnchorProps> = ({ href, children, ...props }) => {
-//   return (
-//     <NextLink href={href ? href : ''} passHref>
-//       <Anchor {...props}>{children}</Anchor>
-//     </NextLink>
-//   );
-// };
 
 export default Link;
