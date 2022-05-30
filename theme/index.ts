@@ -50,6 +50,7 @@ const customTheme: ThemeType = {
     extend: {
       maxWidth: 'initial',
       fontFamily: `'Share Tech Mono', monospace`,
+      lineHeight: '1.4em',
     },
   },
   heading: {
