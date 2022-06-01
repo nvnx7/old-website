@@ -52,9 +52,9 @@ const Works: React.FC<BoxTypes> = ({ ...props }) => {
       <Column justify="start" gap="xsmall">
         <Paragraph>also,</Paragraph>
         <Row gap="small" justify="start">
-          <Text>the</Text>
-          <Link href={socialLinks.dev} target="_blank">
-            blog
+          <Text>see</Text>
+          <Link href={socialLinks.dev} text={{ size: 'xlarge' }} target="_blank">
+            WRITINGS
           </Link>
         </Row>
       </Column>
