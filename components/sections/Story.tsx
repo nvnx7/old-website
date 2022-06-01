@@ -1,3 +1,4 @@
+import { Link } from 'components/common';
 import { Box, BoxTypes, Paragraph } from 'grommet';
 import { DirectionType } from 'grommet/utils';
 import useBreakpointValue from 'hooks/useBreakpointValue';
@@ -15,8 +16,8 @@ const Story: React.FC<BoxTypes> = ({ ...props }) => {
             extinct IDE and write the famous <i>Hello World</i> program in C++. Naveen has always
             been a curious, rabbit-hole explorer, and not-so talkative, kind of being. Being good at
             mathematics (arguably), computers fascinated him. So, at 14, after school hours, he
-            would teach himself programming using whatever at his disposal. He is allergic to
-            monotonous tasks.
+            would teach himself programming using whatever at his disposal. He has been is allergic
+            to monotonous tasks.
           </Paragraph>
           <Paragraph>
             Naveen is a computer engineer coming from a small-time town in India. He skipped formal
@@ -28,10 +29,17 @@ const Story: React.FC<BoxTypes> = ({ ...props }) => {
             interests him.
           </Paragraph>
           <Paragraph>
-            His interest is not only limited to code. You can also find him to reading books of
-            varying subjects - economics, psychology, biographies and a wee-bit fiction. Apart, from
-            being fluent in Hindi and English, he&apos;s also learnt Spanish with working
-            proficiency.
+            His interest is not only limited to code. You can also find him reading books of varying
+            subjects - economics, psychology, biographies and a wee-bit of fiction. Apart, from
+            being fluent in Hindi and English, he&apos;s also able to comprehend Spanish with
+            working proficiency.
+          </Paragraph>
+          <Paragraph>
+            Find me on{' '}
+            <Link href="" target="_blank">
+              Twitter
+            </Link>
+            .
           </Paragraph>
         </Box>
       </Box>
