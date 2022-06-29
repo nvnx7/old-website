@@ -29,7 +29,7 @@ const Works: React.FC<BoxTypes> = ({ ...props }) => {
       <SlideUpHeading color="brand" alignSelf="center">
         works
       </SlideUpHeading>
-      <Paragraph textAlign="center">Some selected works.</Paragraph>
+      <Paragraph textAlign="center">Some selected open-source works.</Paragraph>
       <List
         a11yTitle="list of few selected works"
         data={projects}

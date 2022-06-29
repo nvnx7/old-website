@@ -7,16 +7,12 @@ import { useScroll } from 'context/scroll';
 
 const ScrollBar: React.FC<BoxTypes> = ({ ...props }) => {
   const { scrollY: sy, maxScrollY: sh, scrollYTo } = useScroll();
-
   const ref = createRef<HTMLDivElement>();
-  // console.log({ sh });
 
   useEffect(() => {
     if (sy >= sh) return;
     const maxY = ref.current?.clientHeight || 0;
     const dy = (sy / sh) * maxY;
-    // console.log({ sy, dy });
-
     api.start({ y: dy });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -25,7 +21,6 @@ const ScrollBar: React.FC<BoxTypes> = ({ ...props }) => {
   const [{ y, scale }, api] = useSpring(() => ({ y: 0, scale: 1 }));
   const dragBind = useDrag(({ movement }) => {
     const dy = movement[1];
-    console.log({ dy });
     scrollYTo(sh * (dy / 100));
   });
 

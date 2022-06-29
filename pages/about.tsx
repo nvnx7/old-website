@@ -28,7 +28,7 @@ const About: NextPage = () => {
         </Hidden>
       </Box>
 
-      <Works pad={{ vertical: 'xlarge', horizontal: 'large' }} />
+      {/* <Works pad={{ vertical: 'xlarge', horizontal: 'large' }} /> */}
 
       <Connect pad={{ vertical: 'large' }} />
     </Layout>
