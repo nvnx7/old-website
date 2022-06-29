@@ -29,7 +29,7 @@ const Works: React.FC<BoxTypes> = ({ ...props }) => {
       <SlideUpHeading color="brand" alignSelf="center">
         works
       </SlideUpHeading>
-      <Paragraph textAlign="center">Some selected works.</Paragraph>
+      <Paragraph textAlign="center">Some selected open-source works.</Paragraph>
       <List
         a11yTitle="list of few selected works"
         data={projects}
@@ -52,9 +52,9 @@ const Works: React.FC<BoxTypes> = ({ ...props }) => {
       <Column justify="start" gap="xsmall">
         <Paragraph>also,</Paragraph>
         <Row gap="small" justify="start">
-          <Text>the</Text>
-          <Link href={socialLinks.dev} target="_blank">
-            blog
+          <Text>see</Text>
+          <Link href={socialLinks.dev} text={{ size: 'xlarge' }} target="_blank">
+            WRITINGS
           </Link>
         </Row>
       </Column>

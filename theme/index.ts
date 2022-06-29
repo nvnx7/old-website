@@ -39,6 +39,9 @@ const customTheme: ThemeType = {
   grommet: {
     extend: cssReset,
   },
+  box: {
+    extend: { position: 'relative' },
+  },
   anchor: {
     textDecoration: 'none',
     fontWeight: 900,

@@ -7,18 +7,24 @@ export interface ProjectItem {
 
 const projects: ProjectItem[] = [
   {
+    title: 'evm-rs',
+    description: 'A Rust implementation of the Ethereum Virtual Machine.',
+    github: 'https://github.com/theNvN/evm-rs',
+    tech: ['rust', 'ethereum'],
+  },
+  {
     title: 'hardhat-test-utils',
     description:
       'A Hardhat plugin exposing a collection of test utilities for testing smart-contracts in Hardhat projects.',
     github: 'https://github.com/theNvN/hardhat-test-utils',
     tech: ['typescript', 'solidity'],
   },
-  {
-    title: 'DAO Launcher',
-    description: 'Launch your OZ-compatible DAOs on Ethereum networks within a few clicks.',
-    github: 'https://github.com/theNvN/dao-launcher',
-    tech: ['nextjs', 'hardhat', 'typescript', 'solidity', 'chakra-ui'],
-  },
+  // {
+  //   title: 'DAO Launcher',
+  //   description: 'Launch your OZ-compatible DAOs on Ethereum networks within a few clicks.',
+  //   github: 'https://github.com/theNvN/dao-launcher',
+  //   tech: ['nextjs', 'hardhat', 'typescript', 'solidity', 'chakra-ui'],
+  // },
   {
     title: 'Artista',
     description:
